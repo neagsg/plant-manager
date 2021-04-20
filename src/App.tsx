@@ -1,21 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ThemeProvider } from 'styled-components/native';
+
+import { Welcome } from './screens/Welcome';
+import theme from './styles/theme';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-    </View>
+    <ThemeProvider theme={theme}>
+      <Welcome />
+    </ThemeProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 32,
-  },
-});
 
 export default App;
