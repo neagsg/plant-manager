@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components/native';
+import { Dimensions } from 'react-native';
 
 export const Wrapper = styled.View`
   flex: 1;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 export const Title = styled.Text`
   ${({ theme }) => css`
@@ -14,7 +15,11 @@ export const Title = styled.Text`
     text-align: center;
   `}
 `;
-// export const Banner = styled.Image``;
+
+export const Image = styled.Image`
+  height: ${Dimensions.get('window').width * 0.7}px;
+`;
+
 export const Subtitle = styled.Text`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small}px;
@@ -35,9 +40,4 @@ export const Button = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
   `}
-`;
-
-export const Image = styled.Image`
-  width: 292px;
-  height: 284px;
 `;

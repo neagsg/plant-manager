@@ -12,7 +12,7 @@ export const Welcome = () => {
         suas plantas de {'\n'}
         forma fácil {'\n'}
       </S.Title>
-      <S.Image source={wateringImg} />
+      <S.Image source={wateringImg} resizeMode="contain" />
       <S.Subtitle>
         Não esqueça mais de regar suas {'\n'}
         plantas. Nós cuidamos de lembrar você {'\n'}
