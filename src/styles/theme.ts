@@ -20,6 +20,11 @@ export default {
   },
 
   font: {
+    family: {
+      light: 'Jost-Light',
+      regular: 'Jost-Regular',
+      semiBold: 'Jost-SemiBold',
+    },
     normal: 'normal',
     bold: 'bold',
     sizes: {

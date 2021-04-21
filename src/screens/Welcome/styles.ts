@@ -9,10 +9,11 @@ export const Wrapper = styled.View`
 export const Title = styled.Text`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large}px;
-    font-weight: ${theme.font.bold};
+    font-family: ${theme.font.family.semiBold};
     margin-top: ${theme.spacings.xsmall}px;
     color: ${theme.colors.heading}
     text-align: center;
+    line-height: 38px;
   `}
 `;
 
@@ -23,7 +24,7 @@ export const Image = styled.Image`
 export const Subtitle = styled.Text`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small}px;
-    padding: 0 ${theme.spacings.xxsmall}px;
+    font-family: ${theme.font.family.regular};
     color: ${theme.colors.bodyDark}
     text-align: center;
     line-height: 25px;
