@@ -1,12 +1,24 @@
 import styled, { css } from 'styled-components/native';
 
+type InputProps = {
+  isFocused: boolean;
+};
+
 export const Wrapper = styled.SafeAreaView`
   flex: 1;
   width: 100%;
   align-items: center;
   justify-content: center;
 `;
-export const Content = styled.View`
+
+export const Container = styled.KeyboardAvoidingView`
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Content = styled.View<InputProps>`
   flex: 1;
   width: 100%;
 `;
@@ -20,8 +32,8 @@ export const Emoji = styled.Text`
   font-size: 44px;
 `;
 
-export const Input = styled.TextInput`
-  ${({ theme }) => css`
+export const Input = styled.TextInput<InputProps>`
+  ${({ theme, isFocused }) => css`
     border-bottom-width: 1px;
     border-color: ${theme.colors.gray};
     color: ${theme.colors.heading};
@@ -30,6 +42,11 @@ export const Input = styled.TextInput`
     margin-top: 50px;
     padding: 10px;
     text-align: center;
+
+    ${isFocused &&
+    css`
+      border-color: ${theme.colors.green};
+    `}
   `}
 `;
 
