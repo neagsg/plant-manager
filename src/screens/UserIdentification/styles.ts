@@ -43,3 +43,9 @@ export const Title = styled.Text`
     margin-top: 20px;
   `}
 `;
+
+export const Footer = styled.View`
+  width: 100%;
+  margin-top: 40px;
+  padding: 0 20px;
+`;
